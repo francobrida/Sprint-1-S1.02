@@ -5,10 +5,10 @@ function primeNumbers ($limit) {
         $isPrime[0] = false;
         $isPrime[1] = false;
 
-        for ($i = 2; $i * $i <= $limit; $i++) {
+        for ($i = 2; $i * $i <= $limit; $i++) { 
             if ($isPrime[$i]) {
-                for ($multiple = $i * $i; $multiple <= $i; $multiple += $i) {
-                    $isPrime[$multiple] = false;
+                for ($multiple = $i * $i; $multiple <= $limit; $multiple += $i) {
+                 $isPrime[$multiple] = false;
                 }
             }
         }
