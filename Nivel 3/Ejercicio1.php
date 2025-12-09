@@ -1,6 +1,6 @@
 <?php
 
-function primeNumbers ($limit) {
+function calculatePrimeNumbers($limit) {
     $isPrime = array_fill(0, $limit + 1, true); // Creates an array to set status by assigning each number a boolean value
         $isPrime[0] = false;
         $isPrime[1] = false;

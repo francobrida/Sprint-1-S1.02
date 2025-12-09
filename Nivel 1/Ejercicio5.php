@@ -1,15 +1,15 @@
 <?php
+// Added type hints, renamed the function, and adapted it to English.
+function calculateGrade(int $score): string {
 
-function calcularGrado($nota) {
-
-    if ($nota >= 60) {
-        return "Primera División";
-    } else if ($nota >= 45) {
-        return "Segunda División";
-    } else if ($nota >= 33) {
-        return "Tercera División";
+    if ($score >= 60) {
+        return "First Division";
+    } elseif ($score >= 45) {
+        return "Second Division";
+    } elseif ($score >= 33) {
+        return "Third Division";
     } else {
-        return "Reprobado";
+        return "Fail";
     }
 
 }

@@ -4,12 +4,12 @@ $numInteger = 0;
 $numDouble = 4.5;
 $text = "Esto es un String";
 $state = true;
-$constNOMBRE = "Franco Bridarolli";
+const NOMBRE = "Franco Bridarolli";
 
 echo $numInteger . "<br>"
    . $numDouble . "<br>"
    . $text . "<br>"
    . $state . "<br>"
-   . "<h1>" . $constNOMBRE . "</h1>";
+   . "<h1>" . NOMBRE . "</h1>";
 
 ?>

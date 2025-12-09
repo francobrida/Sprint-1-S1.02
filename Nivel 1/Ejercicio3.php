@@ -6,7 +6,7 @@ $n = 2.5;
 $m = 7.0;
 $num1 = 6;
 $num2 = 3;
-$operador = "+";
+$operator = "+";
 
 echo $x . " " . $y . "<br>" // Muestra X e Y
 . ($x + $y) . "<br>" // Operaciones con X e Y
@@ -29,9 +29,9 @@ echo $x . " " . $y . "<br>" // Muestra X e Y
 
 // PARTE B)
 
-function calculadora ($num1, $num2, $operador) {
-
-   switch ($operador) {
+function calculateOperation(float $num1, float $num2, string $operator): float|string {
+// Added type hints, renamed the function, and adapted everything to English.
+   switch ($operator) {
        case "+":
            return $num1 + $num2;
            break;
@@ -45,11 +45,11 @@ function calculadora ($num1, $num2, $operador) {
            if ($num2 != 0) {
                return $num1 / $num2;
            } else {
-               return "Error: División por cero.";
+               return "Error: Division by zero.";
            }
            break;
        default:
-           return "Error: Operador no válido.";
+           return "Error: Operator not valid.";
     }
 }
 
