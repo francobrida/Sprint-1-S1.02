@@ -1,6 +1,6 @@
 <?php
 
-function costCall ($duration) {
+function calculateCost(float $duration) : float {
     if ($duration <= 3) {   
         $cost = 0.10;   
     } else {    
@@ -10,5 +10,8 @@ function costCall ($duration) {
     return $cost;
 
 }
+
+$myCost = calculateCost(5);
+echo $myCost;
 
 ?>
