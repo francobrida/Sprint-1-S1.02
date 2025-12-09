@@ -5,7 +5,7 @@ function calculatePrimeNumbers($limit) {
         $isPrime[0] = false;
         $isPrime[1] = false;
 
-        for ($i = 2; $i * $i <= $limit; $i++) { // I used some AI to help me with the maths on this loop
+        for ($i = 2; $i * $i <= $limit; $i++) { 
             if ($isPrime[$i]) {
                 for ($multiple = $i * $i; $multiple <= $limit; $multiple += $i) {
                  $isPrime[$multiple] = false;
