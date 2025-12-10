@@ -1,9 +1,13 @@
 <?php
 
+
+
 function calculatePrimeNumbers($limit) {
     $isPrime = array_fill(0, $limit + 1, true); // Creates an array to set status by assigning each number a boolean value
         $isPrime[0] = false;
         $isPrime[1] = false;
+
+        /* TO RE-DO WITHOUT ANY AI
 
         for ($i = 2; $i * $i <= $limit; $i++) { 
             if ($isPrime[$i]) {
@@ -20,6 +24,7 @@ function calculatePrimeNumbers($limit) {
             }
         }
     return $primes; // Returns array with prime numbers up to the limit
+    */
 }
 
 ?>
