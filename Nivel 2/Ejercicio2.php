@@ -1,21 +1,23 @@
 <?php
 
-function validateScores(float $score1, float $score2, float $score3) : string{
+// Added Arrays to the respective functions to optimize.
 
-    if ($score1 < 0 || $score1 > 9999 || $score2 < 0 || $score2 > 9999 || $score3 < 0 || $score3 > 9999) {
-      return "Error: Scores must be between 0 and 9999.";
-    } else {
-      return "Scores are valid.";
+function validateScores(array $scores) : string {
+
+    foreach ($scores as $score) {
+        if ($score < 0 || $score > 9999) {
+        return "Error: Scores must be between 0 and 9999.";
+        }   
     }
+    return "Scores are valid.";
 }
 
-function sumScores (float $score1, float $score2, float $score3) : float{
-    $sum = $score1 + $score2 + $score3;
-    return $sum;
+function sumScores (array $scores) : float {
+    return array_sum($scores);
 }
 
-function calculateAverageScore (float $score1, float $score2, float $score3) : float{
-    return sumScores($score1, $score2, $score3) / 3;
+function calculateAverageScore (array $scores) : float{
+    return sumScores($scores) / count($scores);
 }
 
 function rankScores(float $score) : string {
